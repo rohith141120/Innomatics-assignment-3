@@ -1,0 +1,79 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "navbar navbar navbar"
+        "header header header"
+        "feature-1 feature-2 feature-3"
+        "signup signup signup"
+        "cont cont cont";
+    grid-template-rows: 10% 30% 40% 40% 40% 30% 40%;
+    height: 100vh;
+    font-size: 25px;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        grid-template-areas: 
+            "navbar navbar navbar navbar"
+            "header header header header"
+            "cont cont cont cont"
+            "signup signup feature-1 feature-1"
+            "feature-2 feature-2 feature-3 feature-3";
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        grid-template-areas: 
+            "navbar navbar"
+            "header header"
+            "cont cont"
+            "signup signup"
+            "feature-1 feature-1"
+            "feature-2 feature-2"
+            "feature-3 feature-3";
+    }
+}
+#box-1 {
+    background-color: #007bff; 
+    grid-area: navbar;
+}
+#box-2 {
+    background-color: skyblue;                
+    grid-area: header;
+    display: grid;
+    place-items: center;
+}
+#box-3 {
+    background-color: #f5cb58;                
+    grid-area: feature-1;
+    display: grid;
+    place-items: center;
+}
+#box-4 {
+    background-color: #cf64fad5;           
+    grid-area: feature-2;
+    display: grid;
+    place-items: center;
+}
+#box-5 {
+    background-color: rgba(255, 0, 0, 0.712);          
+    grid-area: feature-3;
+    display: grid;
+    place-items: center;
+}
+#box-6 {
+    background-color: skyblue;            
+    grid-area: signup;
+    display: grid;
+    place-items: center;
+}
+#box-7 {
+    background-color: lightgrey;             
+    grid-area: cont;
+    display: grid;
+    place-items: center;
+}
